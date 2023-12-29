@@ -1,7 +1,7 @@
 import React from 'react';
-import {UserPost} from '../../models/models.ts';
+import {UserPost} from '../../models/models';
 import styled from 'styled-components/native';
-import UserImageProfile from '../profile/UserImageProfile.tsx';
+import UserImageProfile from '../profile/UserImageProfile';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faEllipsisH} from '@fortawesome/free-solid-svg-icons';
 import {
@@ -9,11 +9,7 @@ import {
   faHeart,
   faMessage,
 } from '@fortawesome/free-regular-svg-icons';
-import {
-  horizontalScale,
-  scaleFontSize,
-  verticalScale,
-} from '../../lib/scaling.ts';
+import {horizontalScale, scaleFontSize, verticalScale} from '../../lib/scaling';
 
 type Props = {
   post: UserPost;
