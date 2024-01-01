@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from 'react';
-import {UserPost, UserStory} from '../../models/models';
+import React, { useEffect, useState } from 'react';
+import { UserPost, UserStory } from '../../models/models';
 import userStories from '../../data/userStories';
 import userPosts from '../../data/userPosts.ts';
-import {FlatList, SafeAreaView} from 'react-native';
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import { FlatList, SafeAreaView } from 'react-native';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import {
   horizontalScale,
   scaleFontSize,
@@ -92,7 +92,7 @@ const Home = () => {
                   showsHorizontalScrollIndicator={false}
                   horizontal={true}
                   data={userStoriesRenderedData}
-                  renderItem={({item}) => <StoryItem item={item} />}
+                  renderItem={({ item }) => <StoryItem item={item} />}
                   keyExtractor={item => `user-story-${item.id}`}
                 />
               </StoriesContainer>
@@ -117,7 +117,7 @@ const Home = () => {
           }}
           data={userPostsRenderedData}
           showsVerticalScrollIndicator={false}
-          renderItem={({item}) => <UserPostItem post={item} />}
+          renderItem={({ item }) => <UserPostItem post={item} />}
           keyExtractor={item => `user-post-${item.id}`}
         />
       </PostsContainer>

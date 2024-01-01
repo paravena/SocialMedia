@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import {ImageSourcePropType} from 'react-native';
-import {horizontalScale} from '../../lib/scaling';
+import { ImageSourcePropType } from 'react-native';
+import { horizontalScale } from '../../lib/scaling';
 
 type Props = {
   source: ImageSourcePropType;
   size: number;
 };
-const UserImageProfile = ({source, size}: Props) => (
+const UserImageProfile = ({ source, size }: Props) => (
   <ImageContainer>
     <StoryImage source={source} size={size} />
   </ImageContainer>
@@ -20,8 +20,8 @@ const ImageContainer = styled.View`
 `;
 
 const StoryImage = styled.Image<Pick<Props, 'size'>>`
-  width: ${({size}) => size}px;
-  height: ${({size}) => size}px;
+  width: ${({ size }) => size}px;
+  height: ${({ size }) => size}px;
 `;
 
 export default UserImageProfile;

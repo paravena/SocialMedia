@@ -1,20 +1,24 @@
 import React from 'react';
-import {UserPost} from '../../models/models';
+import { UserPost } from '../../models/models';
 import styled from 'styled-components/native';
 import UserImageProfile from '../profile/UserImageProfile';
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {faEllipsisH} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 import {
   faBookmark,
   faHeart,
   faMessage,
 } from '@fortawesome/free-regular-svg-icons';
-import {horizontalScale, scaleFontSize, verticalScale} from '../../lib/scaling';
+import {
+  horizontalScale,
+  scaleFontSize,
+  verticalScale,
+} from '../../lib/scaling';
 
 type Props = {
   post: UserPost;
 };
-const UserPostItem = ({post}: Props) => {
+const UserPostItem = ({ post }: Props) => {
   const {
     firstName,
     lastName,

@@ -1,4 +1,4 @@
-import {UserPost} from '../models/models.ts';
+import { UserPost } from '../models/models.ts';
 const defaultPostImage = require('../../assets/images/default_post.png');
 const defaultProfileImage = require('../../assets/images/default_profile.png');
 

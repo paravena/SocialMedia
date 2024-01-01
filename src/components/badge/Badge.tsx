@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import {PropsWithChildren} from 'react';
+import { PropsWithChildren } from 'react';
 import {
   horizontalScale,
   scaleFontSize,
@@ -9,7 +9,7 @@ import {
 
 type Props = PropsWithChildren<{}>;
 
-const Badge = ({children}: Props) => (
+const Badge = ({ children }: Props) => (
   <Container>
     <BadgeText>{children}</BadgeText>
   </Container>

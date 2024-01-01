@@ -6,13 +6,13 @@ import {
   scaleFontSize,
   verticalScale,
 } from '../../lib/scaling.ts';
-import {UserStory} from '../../models/models.ts';
+import { UserStory } from '../../models/models.ts';
 
 type Props = {
   item: UserStory;
 };
-const StoryItem = ({item}: Props) => {
-  const {firstName, profileImage} = item;
+const StoryItem = ({ item }: Props) => {
+  const { firstName, profileImage } = item;
   return (
     <Container>
       <UserImageProfile source={profileImage} size={horizontalScale(65)} />
