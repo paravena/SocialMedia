@@ -15,6 +15,8 @@ import StoryItem from '../../components/story/StoryItem';
 import UserPostItem from '../../components/post/UserPostItem';
 import styled from 'styled-components/native';
 import globalStyles from '../../../assets/styles/globalStyles.ts';
+import { RootStackParamsList } from '../../navigation/Routes.ts';
+import { StackScreenProps } from '@react-navigation/stack';
 
 const USER_STORIES_PAGE_SIZE = 4;
 const USER_POSTS_PAGE_SIZE = 2;
@@ -27,7 +29,9 @@ function pagination<T>(database: T[], currentPage: number, pageSize: number) {
   }
   return database.slice(startIndex, endIndex);
 }
-const Home = () => {
+
+type Props = StackScreenProps<RootStackParamsList, 'Home'>;
+const Home = ({ navigation }: Props) => {
   const [userStoriesCurrentPage, setUserStoriesCurrentPage] = useState(1);
   const [userStoriesRenderedData, setUserStoriesRenderedData] = useState<
     UserStory[]
